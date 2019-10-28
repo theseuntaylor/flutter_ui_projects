@@ -1,0 +1,99 @@
+
+/*Widget _changeFavourite = Container(
+    child: Align(
+      alignment: Alignment.topLeft,
+        child: IconButton(icon: Icon(Icons.favorite_border), onPressed: (){changeFavourite;})
+    ),
+  );*/
+
+/*changeFavourite (IconButton iconButton){
+    GestureDetector(
+        onTap: (){
+          //will set the icon button to the filled one
+          iconButton = new IconButton(icon: Icon(Icons.favorite), onPressed: null);
+        },
+
+    );
+  }*/
+
+
+  //static int _selectedIndex = 0;
+
+ /* Widget bottomNav = new BottomNavigationBar(
+      backgroundColor: Colors.black,
+      selectedItemColor: Colors.pink[700],
+      selectedFontSize: 0.0,
+      unselectedItemColor: Colors.pink[200],
+      items: [
+        BottomNavigationBarItem(icon: Icon(Icons.home), title: Text('Home')),
+        BottomNavigationBarItem(icon: Icon(Icons.favorite_border), title: Text('Favourite')),
+        BottomNavigationBarItem(icon: Icon(Icons.shopping_basket), title: Text('Cart')),
+        BottomNavigationBarItem(icon: Icon(Icons.settings), title: Text('Settings')),
+      ],
+
+      currentIndex: _selectedIndex,
+      onTap: (int index) {
+        //setState(() {
+
+        });
+        print('Item $index was clicked!');
+        _selectedIndex = index;
+      }
+  );*/
+
+
+
+/*Container(height: 200.0,
+                  padding: EdgeInsets.only(right: 10.0),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: <Widget>[
+                      Stack(
+                        children: <Widget>[
+                          Image.asset('assets/images/lamp_vase.jpg', fit: BoxFit.fill,),
+                          //changeFavourite
+                        ],
+                      ),
+                      new lampInformation('Vase Pendant', r'$35.31')
+                    ],
+                  ),
+                ),
+                Container(
+                  padding: EdgeInsets.only(right: 10.0),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: <Widget>[
+                      Stack(
+                        children: <Widget>[
+                          Image.asset('assets/images/forest_lamps.jpg', fit: BoxFit.fill,),
+                          //changeFavourite
+                        ],
+                      ),
+                      new lampInformation('Cece Pendant', r'$249.15')
+                    ],
+                  ),
+                )*/
+
+                //
+                //  Container _lampInformation(String name, String price){
+                //    return Container(
+                //      child: Column(
+                //        children: <Widget>[
+                //          Text(name, style: TextStyle(
+                //              fontSize: 20.0,
+                //              fontWeight: FontWeight.w300
+                //          ),),
+                //          Align(
+                //            alignment: Alignment.centerLeft,
+                //            child: Container(
+                //              child: Text(price, textAlign: TextAlign.left,
+                //                style: TextStyle(
+                //                    fontSize: 20.0,
+                //                    fontWeight: FontWeight.w700
+                //                ),),
+                //            ),
+                //          )
+                //        ],
+                //      ),
+                //    );
+                //  }
