@@ -54,7 +54,8 @@ class ImageOverView extends StatelessWidget {
         children: <Widget>[
           Stack(
             children: <Widget>[
-              Image.asset('assets/images/cloudy_lamp.jpg', fit: BoxFit.fill,),
+              Image.asset(
+                'assets/images/cloudy_lamp.jpg', fit: BoxFit.fitHeight,),
               IconButton(
                   icon: _isFavorited
                       ? Icon(
