@@ -15,7 +15,7 @@ class _DetailedInformationState extends State<DetailedInformation> {
           backgroundColor: const Color(0xffDAF7A6),
           title: Text("UI Projects"),
         ),
-        body: new SlidingPanel());
+        body: SlidingPanel());
   }
 }
 
@@ -33,7 +33,10 @@ class SlidingPanel extends StatelessWidget {
       panelSnapping: true,
       borderRadius: BorderRadius.only(
           topRight: Radius.circular(25.0), topLeft: Radius.circular(25.0)),
-      maxHeight: (MediaQuery.of(context).size.height) / 2,
+      maxHeight: 9 * (MediaQuery
+          .of(context)
+          .size
+          .height) / 16,
       body: new Container(
         margin: EdgeInsets.all(5.0),
         child: Center(child: ImageOverView()),
@@ -51,17 +54,17 @@ class ImageOverView extends StatelessWidget {
         children: <Widget>[
           Stack(
             children: <Widget>[
-              Image.asset('assets/images/paper_lamp.jpg'),
+              Image.asset('assets/images/paper_lamp.jpg', fit: BoxFit.fill,),
               IconButton(
                   icon: _isFavorited
                       ? Icon(
-                          Icons.favorite,
-                          color: Colors.pink[500],
-                        )
+                    Icons.favorite,
+                    color: Colors.pink[500],
+                  )
                       : Icon(
-                          Icons.favorite_border,
-                          color: Colors.pink[500],
-                        ),
+                    Icons.favorite_border,
+                    color: Colors.pink[500],
+                  ),
                   onPressed: () {
                     FavoriteWidget();
                   }),
@@ -103,6 +106,7 @@ Widget _floatingPanel() {
           ]),
       margin: const EdgeInsets.all(24.0),
       child: Column(
+        mainAxisSize: MainAxisSize.min,
         children: <Widget>[
           Container(
             margin: EdgeInsets.all(15.0),
@@ -124,10 +128,10 @@ Widget _floatingPanel() {
             margin: EdgeInsets.only(left: 15.0, right: 15.0, bottom: 15.0),
             child: Text(
               "The decision of making 1/4 transparent glass and 3/4 "
-              "sandlasted glass rises from the necessity of focusing the"
-              " direct light on the bottom side and concentrate it on the "
-              "beneath surface while maintaining an indirect and diffuse "
-              "lighting on the mid top side.",
+                  "sandlasted glass rises from the necessity of focusing the"
+                  " direct light on the bottom side and concentrate it on the "
+                  "beneath surface while maintaining an indirect and diffuse "
+                  "lighting on the mid top side.",
               softWrap: true,
               style: TextStyle(fontSize: 16.0),
             ),
@@ -180,12 +184,11 @@ class Properties extends StatelessWidget {
   final String weirdNumber, siUnits;
   final IconData icon;
 
-  const Properties(
-    this.weirdNumber,
-    this.siUnits,
-    this.icon, {
-    Key key,
-  }) : super(key: key);
+  const Properties(this.weirdNumber,
+      this.siUnits,
+      this.icon, {
+        Key key,
+      }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -213,8 +216,6 @@ class ButtonsRow extends StatefulWidget {
 class _ButtonsRowState extends State<ButtonsRow> {
   @override
   Widget build(BuildContext context) {
-    PanelController panelController = new PanelController();
-
     double width = MediaQuery.of(context).size.width;
 
     double yourWidth = width * 0.78;
@@ -224,21 +225,21 @@ class _ButtonsRowState extends State<ButtonsRow> {
         children: <Widget>[
           Center(
               child: Container(
-            width: yourWidth,
-            margin: EdgeInsets.only(
-              left: 7.5,
-            ),
-            child: RaisedButton(
-                shape: RoundedRectangleBorder(
-                  borderRadius: new BorderRadius.circular(10.0),
+                width: yourWidth,
+                margin: EdgeInsets.only(
+                  left: 7.5,
                 ),
-                color: Color(0xffECFCFD),
-                padding: EdgeInsets.all(15.0),
-                child: Text('Buy Now'),
-                onPressed: () {
-                  print("this shit works");
-                }),
-          ))
+                child: RaisedButton(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: new BorderRadius.circular(10.0),
+                    ),
+                    color: Color(0xffECFCFD),
+                    padding: EdgeInsets.all(15.0),
+                    child: Text('Buy Now'),
+                    onPressed: () {
+                      print("this shit works");
+                    }),
+              ))
         ],
       ),
     );
